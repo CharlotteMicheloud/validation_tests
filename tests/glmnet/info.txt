@@ -1,0 +1,13 @@
+Tests for package glmnet, function cv.glmnet. 
+
+The following tests are performed: 
+
+## 1. tests that the output structure is a expected, i.e.
+ 	- it is a list,
+	-  contains the components 'glmnet.fit', 'lambda.min' and 'lambda.1se' 
+
+## 2. tests that errors are produced for invalid output, i.e. when inputs are NULL or when dimensions do not match. 
+
+## 3. tests that if 'family = "cox"', the response needs to be a matrix with columns 'time' (>0) and 'status' (binary) or a Surv object.
+
+## 4. tests that if 'family = "binomial"', the response has to be binomial.
